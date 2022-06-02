@@ -1,0 +1,25 @@
+$theme-color: map-get($theme-colors, "dark");
+$theme-neutral-color: scale-color($theme-color, $lightness: 95%);
+$form-border-color:scale-color($theme-color, $lightness: 60%);
+
+.device-test {
+    .leading {
+        background-color: $theme-neutral-color;
+    }
+    .lead {
+        @include media-breakpoint-down(lg) {
+            font-size: rfs-fluid-value(1rem);
+          } 
+    }
+    .content {
+    }
+    .device-info {
+        display: grid;
+        grid-template-columns: minmax(min-content,200px) auto;
+        border: 2px solid #d2d2d2;
+        & > div {
+            border: 1px solid #d2d2d2;
+            padding: 10px;
+        }
+    }
+}

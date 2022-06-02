@@ -1,0 +1,45 @@
+{
+  "name": "carsales-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "build:dev": "webpack",
+    "watch:dev": "webpack --watch",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "autoprefixer": "^10.2.5",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.5",
+    "exports-loader": "^2.0.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-loader-jest": "^0.2.1",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-transform-stub": "^2.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^6.0.0",
+    "postcss-loader": "^5.3.0",
+    "sass-loader": "^11.1.1",
+    "webpack": "~5.37.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "browserslist": [
+    "> 1%"
+  ],
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
+    "jquery": "^3.6.0"
+  }
+}

@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+//customise
+$theme-primary-color: #412620;
+//override
+$body-color: $theme-primary-color;
+$custom-colors : (
+    "dark": $theme-primary-color
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "~bootstrap/scss/bootstrap";

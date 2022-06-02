@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Coffee</title>
+  </head>
+  <body>
+    <section class="hero bg-dark">
+      <div class="hero__image"></div>
+      <div class="hero__scrim"></div>
+      <div class="container text-center hero__text">
+        <div class="col p-lg-5 mx-auto">
+          <h1 class="display-2 fw-bolder text-white m-0">Lorem Ipsum</h1>
+        </div>
+      </div>
+    </section>
+    <section class="leading">
+      <div class="container text-center">
+        <div class="col-lg-12 p-4 p-lg-5 mx-auto">
+          <h4 class="fw-normal">Donec sollicitudin molestie malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</h4>
+        </div>
+      </div>
+    </section>
+    <section class="content mb-sm-2 mb-md-4 mb-lg-5">
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2">
+          <div class="col g-0 d-flex align-items-center">
+            <div class="content__image-frame">
+              <img class="content__image" src="img/john-schnobrich-ydju9gb6fiI-unsplash-dark-1200x588.jpg" />
+            </div>
+          </div>
+          <div class="col p-4 p-sm-3 p-md-4 p-lg-5 text-center d-flex align-items-center">
+            <div class="row">
+              <div class="col">
+                <p class="lead fw-normal mb-0">Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content content--reverse mb-sm-2 mb-md-4 mb-lg-5">
+      <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 content__row">
+          <div class="col p-4 p-sm-3 p-md-4 p-lg-5 text-center d-flex align-items-center">
+            <div class="row">
+              <div class="col">
+                <p class="lead fw-normal mb-0">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col g-0 d-flex align-items-center">
+            <div class="content__image-frame">
+              <img class="content__image" src="img/rr-abrot-pNIgH0y3upM-unsplash-flip-dark-1200x588.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe pt-5 pb-5 p-sm-5 bg-dark">
+      <div class="subscribe__image"></div>
+      <div class="subscribe__scrim"></div>
+      <div class="container subscribe__text">
+        <div class="row">
+          <form id="subscriber" class="col-md-8 col-lg-6 p-4 p-lg-5 mx-auto needs-validation" novalidate>
+            <div class="row mb-3">
+              <label for="inputName" class="col-2 col-form-label">Name</label>
+              <div class="col-10">
+                <input type="text" placeholder="Name" class="form-control" id="inputName" required>
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail" class="col-2 col-form-label">Email</label>
+              <div class="col-10">
+                <input type="email" placeholder="Email Address" class="form-control" id="inputEmail" 
+                required
+                pattern="^[\s]*?(?=[a-zA-Z0-9!#$%&'*+/=?^_`{|}~\-@\.]{0,254}[\s]*?$)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~\-]([a-zA-Z0-9!#$%&'*+/=?^_`{|}~\-]|[\.](?![\.]|[@])){0,63}@(?:(?=[a-zA-Z0-9\-]{1,63}[\.])[a-zA-Z0-9]+(?:[\-]([a-zA-Z0-9]|[\-](?![\.]))+)*[\.]){1,}(?:(?=[a-zA-Z]{2}[a-zA-Z0-9\-]{0,61}[\s]*?$)[a-zA-Z0-9]([a-zA-Z0-9]|[\-](?=[a-zA-Z0-9\-]))*)[\s]*?$"
+                >
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-10 offset-2">
+                <div class="d-flex flex-column">
+                  <button id="submitBtn" type="submit" class="btn btn-dark col-4">Submit</button>
+                  <div class="invalid-feedback">
+                    Oops...something went wrong. Please try again later.
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
