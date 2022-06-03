@@ -1,10 +1,14 @@
 import {Settings} from "~/src/settings/settings";
 
-// export class DeviceData {
-//     constructor() {}
-//     get agent() {}
-//     get isTouch
-// }
+export function flattenToArray(obj) {
+    //{ key1: value1, key2: value2 } => [ [key1,value1],[key2,value2],... ] => [ key1,value1,key2,value2,... ]
+    return Object.entries(obj).flat();
+}
+
+export function mapToArray(obj) {
+    //{ key1: value1, key2: value 2, ... } => [ {key1: value1}, {key2: value3} ]
+    return Object.entries(obj).map(( [k, v] ) => ({ [k]: v }));
+}
 
 export class DeviceTest{
     /**
@@ -17,7 +21,7 @@ export class DeviceTest{
         this.renderDeviceInfo();
     }
     gatherDeviceData() {
-        const data = [];
+        const data = []; //[ {key1,value1}, {key2,value2}, ... ]
 
         const userAgent = navigator?.userAgent;
         data.push({userAgent});
@@ -26,11 +30,11 @@ export class DeviceTest{
             "pointer:none",
             "pointer:coarse",
             "pointer:fine",
-            "hover:none",
-            "hover:hover",
             "any-pointer:none",
             "any-pointer:coarse",
             "any-pointer:fine",
+            "hover:none",
+            "hover:hover",
             "any-hover:none",
             "any-hover:hover"
         ];
@@ -43,20 +47,10 @@ export class DeviceTest{
         return data;
     }
 
-    mapResult(obj) {
-        return Object.entries(obj).map(( [k, v] ) => ({ [k]: v }));
-    }
-
     renderDeviceInfo() {
         const container = this.container.querySelector('#deviceinfo');
-        
-        //[{key, value},{key, value}] -> [ {key}, {value}, {key}, {value} ]
-        const collection = this.deviceData.reduce((result, obj, index) => {
-            const [key, value] = Object.entries(obj)[0];
-            result.push(key);
-            result.push(value);
-            return result;
-        }, []);
+
+        const collection = this.deviceData.flatMap(flattenToArray);
 
         const frag = document.createDocumentFragment();
         collection.forEach(cellData => {
